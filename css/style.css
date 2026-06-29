@@ -209,6 +209,13 @@ input:focus {
   outline: 2px solid var(--accent-color);
 }
 
+input:user-valid {
+  outline: 2px solid green;
+}
+input:user-invalid {
+  outline: 2px solid var(--accent-color);
+}
+
 label {
   font-weight: bold;
   font-size: 0.9rem;
@@ -237,8 +244,11 @@ button[type="submit"]:hover {
   color: var(--accent-color);
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   main > div:first-child {
     display: none;
+  }
+  main > div:last-child {
+    padding: 1em;
   }
 }
