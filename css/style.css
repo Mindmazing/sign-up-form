@@ -242,6 +242,7 @@ button {
 }
 
 button:hover {
+  outline: 2px solid var(--secondary-color);
 }
 
 button[type="submit"] {
