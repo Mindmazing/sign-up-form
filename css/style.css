@@ -216,6 +216,15 @@ input:user-invalid {
   outline: 2px solid var(--accent-color);
 }
 
+.required::after {
+  content: "*";
+  font-weight: bold;
+  color: var(--accent-color);
+  margin-left: 1em;
+  position: relative;
+  top: 3px;
+}
+
 label {
   font-weight: bold;
   font-size: 0.9rem;
@@ -230,6 +239,9 @@ button {
   background-color: var(--primary-color);
   border: none;
   transition: 0.2s;
+}
+
+button:hover {
 }
 
 button[type="submit"] {
