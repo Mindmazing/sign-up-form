@@ -203,6 +203,7 @@ input {
   padding: 10px;
   border: none;
   background-color: var(--_background-color);
+  width: 100%;
 }
 
 input:focus {
@@ -238,7 +239,8 @@ button {
   cursor: pointer;
   background-color: var(--primary-color);
   border: none;
-  transition: 0.2s;
+  transition: 0.3s;
+  outline: none;
 }
 
 button:hover {
@@ -261,7 +263,13 @@ button[type="submit"]:hover {
   main > div:first-child {
     display: none;
   }
+}
+
+@media (max-width: 600px) {
+  .form-container {
+    width: 100%;
+  }
   main > div:last-child {
-    padding: 1em;
+    padding: 2em;
   }
 }
