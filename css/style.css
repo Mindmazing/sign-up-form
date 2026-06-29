@@ -1,0 +1,235 @@
+@font-face {
+  font-family: "Roboto";
+  src:
+    url("../fonts/Roboto-Regular.woff2") format("woff2"),
+    url("../fonts/Roboto-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src:
+    url("../fonts/Outfit-ExtraBold.woff2") format("woff2"),
+    url("../fonts/Outfit-ExtraBold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+*:not(dialog) {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Increase line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* Site styles */
+
+:root {
+  --primary-font: "Outfit", sans-serif;
+  --secondary-font: "Roboto", sans-serif;
+
+  --primary-color: #f6f6f6;
+  --secondary-color: #2c2e3e;
+  --accent-color: #ee2b47;
+
+  --text-color: var(--secondary-color);
+  --header-color: var(--accent-color);
+}
+
+body {
+  color: var(--text-color);
+  font-family: var(--secondary-font);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--primary-font);
+  color: var(--accent-color);
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+main {
+  display: flex;
+  height: 100vh;
+}
+main > div:first-child {
+  background-image: url("../images/runner-background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-bottom: 5px solid var(--accent-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--primary-color);
+  background-color: rgba(0, 0, 0, 0.7);
+  background-blend-mode: darken;
+}
+
+main > div:first-child h1 {
+  color: var(--primary-color);
+}
+
+main > div:first-child p {
+  max-width: 50%;
+  opacity: 0.9;
+}
+
+main > div {
+  flex: 1;
+  padding: 3em;
+}
+
+.logo {
+  font-size: 2rem;
+  font-family: var(--primary-font);
+}
+
+/* form container */
+main > div:last-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-container {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.form-row {
+  display: flex;
+  gap: 1em;
+  margin-bottom: 1em;
+}
+
+.form-row > div {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: calc(50% - 1em);
+  justify-content: end;
+}
+
+/* input elements */
+input {
+  --_background-color: #9a9a9a27;
+  border-radius: 10px;
+  padding: 10px;
+  border: none;
+  background-color: var(--_background-color);
+}
+
+input:focus {
+  outline: 2px solid var(--accent-color);
+}
+
+label {
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-bottom: 0.5em;
+}
+
+button {
+  border-radius: 10px;
+  padding: 10px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button[type="button"] {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+}
+
+@media (max-width: 700px) {
+  main > div:first-child {
+    display: none;
+  }
+}
