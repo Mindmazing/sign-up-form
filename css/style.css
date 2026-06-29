@@ -218,14 +218,16 @@ label {
 button {
   border-radius: 10px;
   padding: 10px;
-  border: none;
   font-weight: bold;
   cursor: pointer;
+  background-color: var(--primary-color);
+  border: none;
 }
 
-button[type="button"] {
+button[type="submit"] {
   background-color: var(--accent-color);
   color: var(--primary-color);
+  border: none;
 }
 
 @media (max-width: 700px) {
