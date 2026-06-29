@@ -222,12 +222,19 @@ button {
   cursor: pointer;
   background-color: var(--primary-color);
   border: none;
+  transition: 0.2s;
 }
 
 button[type="submit"] {
   background-color: var(--accent-color);
   color: var(--primary-color);
   border: none;
+}
+
+button[type="submit"]:hover {
+  background-color: var(--primary-color);
+  outline: 2px solid var(--accent-color);
+  color: var(--accent-color);
 }
 
 @media (max-width: 700px) {
